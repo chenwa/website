@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600&display=swap");
 
 /*
 	Dimension by HTML5 UP
@@ -107,6 +107,26 @@ input, select, textarea {
 			-webkit-transition: none !important;
 			-ms-transition: none !important;
 			transition: none !important;
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			*, *:before, *:after {
+				animation-duration: 0.01ms !important;
+				animation-iteration-count: 1 !important;
+				transition-duration: 0.01ms !important;
+				scroll-behavior: auto !important;
+			}
+
+			#bg:after {
+				-moz-filter: none !important;
+				-webkit-filter: none !important;
+				-ms-filter: none !important;
+				filter: none !important;
+				-moz-transform: none !important;
+				-webkit-transform: none !important;
+				-ms-transform: none !important;
+				transform: none !important;
+			}
 		}
 
 /* Type */
@@ -1112,6 +1132,7 @@ input, select, textarea {
 		-ms-transform: scale(1.0);
 		transform: scale(1.0);
 		-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -1131,18 +1152,21 @@ input, select, textarea {
 		}
 
 		#bg:before {
-			-moz-transition: background-color 2.5s ease-in-out;
-			-webkit-transition: background-color 2.5s ease-in-out;
-			-ms-transition: background-color 2.5s ease-in-out;
-			transition: background-color 2.5s ease-in-out;
-			-moz-transition-delay: 0.75s;
-			-webkit-transition-delay: 0.75s;
-			-ms-transition-delay: 0.75s;
-			transition-delay: 0.75s;
+			-moz-transition: background-color 1s ease-in-out;
+			-webkit-transition: background-color 1s ease-in-out;
+			-ms-transition: background-color 1s ease-in-out;
+			transition: background-color 1s ease-in-out;
+			-moz-transition-delay: 0.2s;
+			-webkit-transition-delay: 0.2s;
+			-ms-transition-delay: 0.2s;
+			transition-delay: 0.2s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1151,10 +1175,11 @@ input, select, textarea {
 			-webkit-transform: scale(1.125);
 			-ms-transform: scale(1.125);
 			transform: scale(1.125);
-			-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out;
-			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
-			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
-			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
+			-moz-transition: -moz-transform 0.2s ease-in-out, -moz-filter 0.2s ease-in-out;
+			-webkit-transition: -webkit-transform 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out;
+			-ms-transition: -ms-transform 0.2s ease-in-out, -ms-filter 0.2s ease-in-out;
+			transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+			will-change: transform, filter;
 			background-image: url("../../images/bg.jpg");
 			background-position: center;
 			background-size: cover;
@@ -1167,10 +1192,10 @@ input, select, textarea {
 			-webkit-transform: scale(1.0825);
 			-ms-transform: scale(1.0825);
 			transform: scale(1.0825);
-			-moz-filter: blur(0.2rem);
-			-webkit-filter: blur(0.2rem);
-			-ms-filter: blur(0.2rem);
-			filter: blur(0.2rem);
+				-moz-filter: blur(0.1rem);
+				-webkit-filter: blur(0.1rem);
+				-ms-filter: blur(0.1rem);
+				filter: blur(0.1rem);
 		}
 
 		body.is-preload #bg:before {
@@ -1247,10 +1272,10 @@ input, select, textarea {
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
-		-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-		-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-		-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-		transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+		-moz-transition: -moz-transform 0.2s ease-in-out, -moz-filter 0.2s ease-in-out, opacity 0.2s ease-in-out;
+		-webkit-transition: -webkit-transform 0.2s ease-in-out, -webkit-filter 0.2s ease-in-out, opacity 0.2s ease-in-out;
+		-ms-transition: -ms-transform 0.2s ease-in-out, -ms-filter 0.2s ease-in-out, opacity 0.2s ease-in-out;
+		transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out, opacity 0.2s ease-in-out;
 		background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
 		background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
 		background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
@@ -1260,10 +1285,10 @@ input, select, textarea {
 	}
 
 		#header > * {
-			-moz-transition: opacity 0.325s ease-in-out;
-			-webkit-transition: opacity 0.325s ease-in-out;
-			-ms-transition: opacity 0.325s ease-in-out;
-			transition: opacity 0.325s ease-in-out;
+			-moz-transition: opacity 0.2s ease-in-out;
+			-webkit-transition: opacity 0.2s ease-in-out;
+			-ms-transition: opacity 0.2s ease-in-out;
+			transition: opacity 0.2s ease-in-out;
 			position: relative;
 			margin-top: 3.5rem;
 		}
@@ -1293,7 +1318,20 @@ input, select, textarea {
 			line-height: 5.5rem;
 			border: solid 1px #ffffff;
 			border-radius: 100%;
+			overflow: hidden;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
 		}
+
+			#header .logo img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center 45%;
+				border-radius: 50%;
+				display: block;
+			}
 
 			#header .logo .icon:before {
 				font-size: 2rem;
@@ -1308,14 +1346,14 @@ input, select, textarea {
 		}
 
 			#header .content .inner {
-				-moz-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
-				-webkit-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
-				-ms-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
-				transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
-				-moz-transition-delay: 0.25s;
-				-webkit-transition-delay: 0.25s;
-				-ms-transition-delay: 0.25s;
-				transition-delay: 0.25s;
+				-moz-transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.2s ease-in-out;
+				-webkit-transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.2s ease-in-out;
+				-ms-transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.2s ease-in-out;
+				transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.2s ease-in-out;
+				-moz-transition-delay: 0.1s;
+				-webkit-transition-delay: 0.1s;
+				-ms-transition-delay: 0.1s;
+				transition-delay: 0.1s;
 				padding: 3rem 2rem;
 				max-height: 40rem;
 				overflow: hidden;
